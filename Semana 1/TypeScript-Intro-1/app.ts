@@ -78,3 +78,65 @@ function curar(personaje: PersonajeVideoJuegocConMetodo, comerHonguito: number) 
 curar (luigi, 10)
 luigi.saltar()
 console.log(luigi)
+
+//Destructuracion
+interface Cancion {
+    nombre: string
+    duracion: number
+    annio: string
+    autor: Persona
+}
+
+interface Persona {
+    nombre: string
+    edad: number
+}
+
+const laMejorCancionDeTodosLosTiempos : Cancion = {
+    nombre: 'Starway to heaven',
+    duracion: 8.02,
+    annio: "1971",
+    autor: {
+        nombre: 'Robert Plant',
+        edad: 22
+    }
+}
+
+const {nombre: unAliasParaElNombre, duracion, annio, autor: {nombre: escritor}} = laMejorCancionDeTodosLosTiempos
+
+console.log('El nombre de la canción es:', unAliasParaElNombre)
+console.log('La duración de la canción es:', duracion)
+console.log('La publicación de la canción fue:', annio)
+console.log('El autor de la canción es:', escritor)
+
+//Destructuracion de arreglos
+const canciones : string[] = ['Stairway to heaven', 'Kashmir', 'Whole Lotta Love', 'Inmigrant song']
+
+//const [stairway, allOfMyLove, Kashmir, pepito, ana ] = canciones
+const [ , , Kashmir, pepito ] = canciones
+
+console.log(pepito)
+
+//Destructuacion en funciones
+export interface Persona2 extends Persona {
+    apellido: string
+}
+
+const nabucodonosor : Persona2 = {
+    apellido: "Perez",
+    nombre: "Nabucodonosor",
+    edad: 50
+}
+
+const ana : Persona2 = {
+    apellido: "Perez",
+    nombre: "Ana",
+    edad: 40
+}
+
+export function procesaDatos (personas: Persona[]) {
+    let nombres: string = ''
+    let sumaEdad : number = 0
+    personas.forEach((persona)  => { nombres += `${persona.nombre}`; sumaEdad += persona.edad  })
+    return [nombres, sumaEdad]
+}
