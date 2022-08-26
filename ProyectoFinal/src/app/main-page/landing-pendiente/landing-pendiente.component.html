@@ -1,4 +1,6 @@
-<div class="bg-warning p-2 text-dark bg-opacity-25 mb-5"></div>
+
+<div [ngStyle]="{'background': 'red'}"></div>
+<i class="bi bi-chevron-bar-down fs-1 d-flex justify-content-center"></i>
 
 <div class="d-flex justify-content-center mb-4">
     <app-landing-form-pendiente [addListar]="addListar"></app-landing-form-pendiente>
@@ -6,3 +8,12 @@
 <div class="d-flex justify-content-center">
     <app-landing-lista [data]="landing"></app-landing-lista>
 </div>
+
+<ul>
+    <li *ngFor="let canasta of landingPendienteService.canastabasica">{{ canastabasica }}</li>
+</ul>
+
+
+
+<!-- Ejemplo -->
+<!-- <hr [ngStyle]="{'background': 'red'}"> -->

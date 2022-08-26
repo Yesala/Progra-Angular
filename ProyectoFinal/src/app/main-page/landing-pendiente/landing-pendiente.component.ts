@@ -18,4 +18,8 @@ export class LandingPendienteComponent {
     this.landing.push(listar)
   }
 
+  constructor(public landingPendienteService : LandingPendienteService ){
+    
+  }
+
 }
