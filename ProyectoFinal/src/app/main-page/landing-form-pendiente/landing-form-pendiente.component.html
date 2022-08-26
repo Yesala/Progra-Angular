@@ -1,0 +1,22 @@
+<section>
+    <h4 class="d-flex justify-content-center">{{ title }}</h4>
+    <br>
+    <form (ngSubmit)="add()" class="row g-3">
+        <div class="col-auto p-2">
+            <label class="form-pendiente" for="pendiente">Compra o gasto</label>
+        </div>
+        <div class="col-auto">
+            <input 
+            type="text" 
+            class="form-control" 
+            id="pendiente" 
+            name="pendiente" 
+            [placeholder]="placeholder"
+            [(ngModel)]="landing.listar"
+            />
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary" type="submit">Agregar</button>
+        </div>
+    </form>
+</section>

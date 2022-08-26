@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Listar } from '../interface/landing.interface';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css']
+  selector: 'app-landing-pendiente',
+  templateUrl: './landing-pendiente.component.html',
+  styleUrls: ['./landing-pendiente.component.css']
 })
-export class LandingComponent {
+export class LandingPendienteComponent {
 
   public landing : Listar [] = [
     {

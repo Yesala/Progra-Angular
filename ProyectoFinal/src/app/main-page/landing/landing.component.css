@@ -34,7 +34,7 @@
   justify-content: center;
 }
 
-button {
+a {
   background-color: white;
   border: 1px solid #ffffff;
   border-radius: 5px;
@@ -44,6 +44,7 @@ button {
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  text-decoration: none;
 }
 
 button:focus {
