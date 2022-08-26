@@ -1,5 +1,13 @@
+.pendiente{
+    font-size: 14px;
+    padding: 20px;
+    background-color: #f4e9d7;
+    border: 15px solid white;
+}
+
 .canasta {
     font-size: 13px;
-    padding-left: 70px;
-    
+    padding: 20px;
+    background-color: #f8f6f4;
+    border: 15px solid white;
 }

@@ -19,8 +19,7 @@ export class LandingPendienteService {
     'Productos alimenticios',
     'Productos para preparar bebidas diversas',
     'Artículos higiene, limpieza y cuidado del hogar',
-    'Bienes escolares',
-    'Insumos'
+    'Bienes escolares'
   ]
 
   constructor() { }
