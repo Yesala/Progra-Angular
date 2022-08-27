@@ -18,9 +18,8 @@ export class LandingPendienteComponent {
   addListar = (listar : Listar) => {
     this.landing.push(listar)
   }
-
+ 
   constructor(public canasta : LandingPendienteService ){
     
   }
-
 }
