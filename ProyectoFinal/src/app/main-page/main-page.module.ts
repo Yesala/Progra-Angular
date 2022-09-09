@@ -4,7 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { LandingHistorialComponent } from './landing-historial/landing-historial.component';
 import { LandingGastosComponent } from './landing-gastos/landing-gastos.component';
 import { LandingListaComponent } from './landing-lista/landing-lista.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingFormPendienteComponent } from './landing-form-pendiente/landing-form-pendiente.component';
 import { RouterModule } from '@angular/router';
 import { LandingPendienteComponent } from './landing-pendiente/landing-pendiente.component';
@@ -27,7 +27,8 @@ import { LandingFormGastosComponent } from './landing-form-gastos/landing-form-g
       {path: 'landing-pendiente', component: LandingPendienteComponent},
       {path: 'landing-gastos', component: LandingGastosComponent},
       {path: 'landing-historial', component: LandingHistorialComponent},
-    ])
+    ]),
+    ReactiveFormsModule
   ],
   exports: [
     LandingComponent
