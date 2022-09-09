@@ -1,22 +1,21 @@
-<!-- <pre>{{ contactForm.value | json }}</pre> -->
-
-<h5>Registrar gastos del mes</h5>
+<!-- <pre>{{ gastosForm.value | json }}</pre> -->
 <br>
-<form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+<h6 [ngStyle]="{'color': '#e69e05', 'font-weight': 'bolder'}">Registrar gastos del mes</h6>
+<br>
+<form (ngSubmit)="onSubmit()" [formGroup]="gastosForm">
 <div class="mb-4">
-  <label for="name" class="form">Gasto</label>
-  <input id="name" class="form-control" name="name" type="text" minlength= "3" required formControlName = "name"/>
-  <p *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']" class="alert alert-danger">Este campo es requerido</p>
-  <p *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['minlength']" class="alert alert-danger">Este campo debe tener al menos 3 caracteres</p>
+  <label for="gasto" class="form">Gasto</label>
+  <input id="gasto" class="form-control" name="gasto" placeholder="Nombre del gasto" type="text" required formControlName = "gasto"/>
+  <p *ngIf="gastosForm.get('gasto')?.touched && gastosForm.get('gasto')?.errors?.['required']" class="alert alert-warning">Este campo es obligatorio</p>
 </div>
 <div class="mb-4">
-  <label for="operativeSystem" class="form-label">Tipo de Gasto</label>
-  <select class="form-select form-select-sm" 
-          name="operativeSystem" 
-          id="operativeSystem" 
-          title="operativeSystem"
-          formControlName = "operativeSystem">
-    <option selected disabled>Seleccione una opcion</option>
+  <label for="tipoGasto" class="form-label">Tipo de Gasto</label>
+  <select class="form-select form-select-sm"  
+          name="tipoGasto" 
+          id="tipoGasto" 
+          title="tipoGasto"
+          formControlName = "tipoGasto">
+    <option selected disabled>Seleccione el tipo de gasto</option>
     <option value="canasta">Canasta Básica</option>
     <option value="deporteyocio">Deporte y Ocio</option>
     <option value="vehiculo">Vehículo</option>
@@ -26,10 +25,15 @@
   </select>
 </div>
 <div class="mb-4">
+  <label for="cantidadGastada" class="form">Cantidad gastada</label>
+  <input id="cantidadGastada" class="form-control" name="cantidadGastada" placeholder="Gasto en colones (sin decimales)" type="text" required formControlName = "cantidadGastada"/>
+  <p *ngIf="gastosForm.get('gasto')?.touched && gastosForm.get('gasto')?.errors?.['required']" class="alert alert-warning">Este campo es obligatorio</p>
+</div>
+<div class="mb-4">
   <label for="comment" class="form-label">Comentarios adicionales</label>
   <textarea class="form-control" id="comment" name="comment" formControlName = "comment"></textarea>
 </div>
-<div class="d-flex justify-content-end">
-  <button class="btn btn-primary"type="submit" [disabled]="contactForm.invalid">Enviar</button>
+<div class="d-flex justify-content mb-4">
+  <button class="btn btn-outline-primary" type="submit" [disabled]="gastosForm.invalid">Registrar</button>
 </div>
 </form>

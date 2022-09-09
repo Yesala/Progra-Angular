@@ -8,30 +8,30 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LandingFormGastosComponent implements OnInit {
 
-  contactForm! : FormGroup
+  gastosForm! : FormGroup
 
   constructor(private readonly formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
-    this.contactForm = this.initForm()
+    this.gastosForm = this.initForm()
     this.onPathValue()
   }
 
   initForm() : FormGroup{
     return this.formBuilder.group ({
-      name : ['', [Validators.required, Validators.minLength(3)]],
-      accept : ['', [Validators.required]],
-      operativeSystem : ['', [Validators.required]],
+      gasto : ['', [Validators.required]],
+      tipoGasto : [''],
+      cantidadGastada : ['', [Validators.required]],
       comment : ['']
     })
   }
 
   onPathValue() {
-    this.contactForm.patchValue( { name : '' } )
+    this.gastosForm.patchValue( { name : '' } )
   }
 
   onSubmit() {
-    console.log(this.contactForm)
+    console.log(this.gastosForm)
   }
 
 }
