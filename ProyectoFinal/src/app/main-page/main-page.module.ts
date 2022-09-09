@@ -9,16 +9,18 @@ import { LandingFormPendienteComponent } from './landing-form-pendiente/landing-
 import { RouterModule } from '@angular/router';
 import { LandingPendienteComponent } from './landing-pendiente/landing-pendiente.component';
 import { LandingFormGastosComponent } from './landing-form-gastos/landing-form-gastos.component';
+import { LandingPostComponent } from './landing-post/landing-post.component';
 
 @NgModule({
   declarations: [
     LandingComponent,
-    LandingHistorialComponent,
     LandingGastosComponent,
-    LandingListaComponent,
-    LandingFormPendienteComponent,
+    LandingHistorialComponent,
     LandingPendienteComponent,
-    LandingFormGastosComponent
+    LandingListaComponent,
+    LandingFormGastosComponent,
+    LandingFormPendienteComponent,
+    LandingPostComponent,
   ],
   imports: [
     CommonModule,
