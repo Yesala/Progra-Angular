@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { LandingFormPendienteComponent } from './landing-form-pendiente/landing-form-pendiente.component';
 import { RouterModule } from '@angular/router';
 import { LandingPendienteComponent } from './landing-pendiente/landing-pendiente.component';
+import { LandingFormGastosComponent } from './landing-form-gastos/landing-form-gastos.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LandingPendienteComponent } from './landing-pendiente/landing-pendiente
     LandingGastosComponent,
     LandingListaComponent,
     LandingFormPendienteComponent,
-    LandingPendienteComponent
+    LandingPendienteComponent,
+    LandingFormGastosComponent
   ],
   imports: [
     CommonModule,
