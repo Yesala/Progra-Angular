@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from '../interface/landingPost.interface';
+import { LandingPostService } from '../service/landing-post.service';
 
 @Component({
   selector: 'app-landing-post',
@@ -8,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPostComponent implements OnInit {
 
-  constructor() { }
+  posts: Post[] = []
+
+  constructor(private landingPostService: LandingPostService) { }
 
   ngOnInit(): void {
+    this.landingPostService.getAll().subscribe(data => this.posts = data)
   }
-
 }

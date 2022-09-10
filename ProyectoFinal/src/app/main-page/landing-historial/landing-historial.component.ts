@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Post } from '../interface/landingPost.interface';
+import { LandingPostService } from '../service/landing-post.service';
 
 @Component({
   selector: 'app-landing-historial',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingHistorialComponent implements OnInit {
 
-  constructor (){}
+  post!: Post;
+
+  constructor(private activateRoute : ActivatedRoute, private landingPostService : LandingPostService) { }
 
   ngOnInit(): void {
-    
+    this.activateRoute.params.subscribe ( ({id}) =>{
+      this.landingPostService.getById(id)
+        .subscribe(post => this.post = post)
+    } )
   }
 }

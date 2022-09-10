@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -14,7 +15,8 @@ import { MainPageModule } from './main-page/main-page.module';
     BrowserModule,
     AppRoutingModule,
     MainPageModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
