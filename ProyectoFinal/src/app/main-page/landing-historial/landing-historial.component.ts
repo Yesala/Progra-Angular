@@ -16,8 +16,7 @@ export class LandingHistorialComponent implements OnInit {
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe ( ({id}) =>{
-      this.landingPostService.getById(id)
-        .subscribe(post => this.post = post)
+      this.landingPostService.getById(id).subscribe(post => this.post = post)
     } )
   }
 }
