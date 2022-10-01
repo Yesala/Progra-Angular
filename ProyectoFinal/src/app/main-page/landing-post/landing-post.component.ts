@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../interface/landingPost.interface';
+import { interval, take } from 'rxjs';
 import { LandingPostService } from '../service/landing-post.service';
 
 @Component({
@@ -10,11 +10,12 @@ import { LandingPostService } from '../service/landing-post.service';
 })
 export class LandingPostComponent implements OnInit {
 
-  posts: Post[] = []
+  //intervalo$ = interval(1000).pipe( take(10) )
 
-  constructor(private landingPostService: LandingPostService) { }
+  constructor(private readonly LandingPostService : LandingPostService) {}
 
   ngOnInit(): void {
-    this.landingPostService.getAll().subscribe(data => this.posts = data)
+    this.LandingPostService.findAll().subscribe(console.log)
   }
 }
+ 

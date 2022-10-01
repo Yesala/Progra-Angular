@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Listar } from '../interface/landing.interface';
-import { LandingPendienteService } from '../service/landing-pendiente.service';
 
 @Component({
   selector: 'app-landing',
