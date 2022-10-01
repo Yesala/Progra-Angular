@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, take } from 'rxjs';
 import { LandingPostService } from '../service/landing-post.service';
 
 @Component({

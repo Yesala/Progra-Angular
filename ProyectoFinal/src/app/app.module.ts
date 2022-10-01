@@ -6,16 +6,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingComponent } from './main-page/landing/landing.component';
-import { NotFoundComponent } from './main-page/not-found/not-found.component';
-import { LandingPostModule } from './main-page/landing-post/landing-post.module';
-import { LandingFormGastosComponent } from './main-page/landing-form-gastos/landing-form-gastos.component';
-import { LandingFormPendienteComponent } from './main-page/landing-form-pendiente/landing-form-pendiente.component';
-import { LandingGastosComponent } from './main-page/landing-gastos/landing-gastos.component';
-import { LandingHistorialComponent } from './main-page/landing-historial/landing-historial.component';
-import { LandingListaComponent } from './main-page/landing-lista/landing-lista.component';
-import { LandingPendienteComponent } from './main-page/landing-pendiente/landing-pendiente.component';
-import { LandingPostComponent } from './main-page/landing-post/landing-post.component';
+import { LandingComponent } from './landing/landing.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LandingPostModule } from './landing-post/landing-post.module';
+import { LandingFormGastosComponent } from './landing-form-gastos/landing-form-gastos.component';
+import { LandingFormPendienteComponent } from './landing-form-pendiente/landing-form-pendiente.component';
+import { LandingGastosComponent } from './landing-gastos/landing-gastos.component';
+import { LandingHistorialComponent } from './landing-historial/landing-historial.component';
+import { LandingListaComponent } from './landing-lista/landing-lista.component';
+import { LandingPendienteComponent } from './landing-pendiente/landing-pendiente.component';
+import { LandingPostComponent } from './landing-post/landing-post.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,10 @@ import { LandingPostComponent } from './main-page/landing-post/landing-post.comp
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
     LandingPostModule,
-    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
