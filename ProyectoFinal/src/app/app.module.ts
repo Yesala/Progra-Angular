@@ -31,7 +31,8 @@ import { LandingPostCardComponent } from './landing-post-card/landing-post-card.
     LandingFormPendienteComponent,
     LandingPostComponent,
     NotFoundComponent,
-    LandingPostCardComponent
+    LandingPostCardComponent,
+
   ],
   imports: [
     BrowserModule,
