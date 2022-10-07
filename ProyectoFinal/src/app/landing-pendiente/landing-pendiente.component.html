@@ -8,13 +8,13 @@
 <div class="container">
     <div class="row">
         <div class="pendiente col-6">
-            <p [ngStyle]="{'color': 'gray'}">Pendientes</p>
+            <p>Pendientes</p>
             <app-landing-lista [data]="landing"></app-landing-lista>
         </div>
         <div class="canasta col-6">
-            <p [ngStyle]="{'color': 'gray'}">Lista Canasta Básica</p>
+            <p [ngStyle]="{'color': 'gray'}">Lista Canasta Básica de Referencia</p>
             <ul>
-                <li *ngFor="let canasta of canasta.canastabasica">{{ canasta }}</li>
+                <li class="lh-lg" *ngFor="let canasta of canasta.canastabasica">{{ canasta }}</li>
             </ul>
         </div>
     </div>
