@@ -17,8 +17,8 @@
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  padding: 5px;
   margin-bottom: 10px;
-  margin-top: 20px;
 }
 
 .Encabezado {
@@ -35,20 +35,64 @@
   justify-content: center;
 }
 
-a {
+.button{
+  margin-left: 18px;
+  
+}
+
+/* a {
   background-color: white;
   border: 1px solid #ffffff;
   border-radius: 5px;
   color: #a3a19d;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   text-decoration: none;
-}
+} */
 
 button:focus {
   outline: none;
+}
+
+/* hoover alternativo */
+
+a {
+  background-image: linear-gradient(
+    to right,
+    #2278a9,
+    #2278a9 50%,
+    #9d9e9f 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+a:before {
+  content: '';
+  background: #fab70f;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+ background-position: 0;
+}
+
+a:hover::before {
+  width:100%;
 }
 

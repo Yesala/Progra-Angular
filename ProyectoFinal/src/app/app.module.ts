@@ -18,6 +18,7 @@ import { LandingPendienteComponent } from './landing-pendiente/landing-pendiente
 import { LandingPostComponent } from './landing-post/landing-post.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingPostCardComponent } from './landing-post-card/landing-post-card.component';
+import { LandingAnimatComponent } from './landing-animat/landing-animat.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LandingPostCardComponent } from './landing-post-card/landing-post-card.
     LandingPostComponent,
     NotFoundComponent,
     LandingPostCardComponent,
+    LandingAnimatComponent,
 
   ],
   imports: [

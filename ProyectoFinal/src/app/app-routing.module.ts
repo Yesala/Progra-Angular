@@ -7,6 +7,7 @@ import { LandingPendienteComponent } from './landing-pendiente/landing-pendiente
 import { LandingComponent } from './landing/landing.component';
 import { LandingPostComponent } from './landing-post/landing-post.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LandingAnimatComponent } from './landing-animat/landing-animat.component';
 
 const routes: Routes = [
   {path: 'landing', component: LandingComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'landing-gastos', component: LandingGastosComponent},
   {path: 'landing-historial', component: LandingHistorialComponent},
   {path: 'landing-post', component: LandingPostComponent},
+  {path: 'landing-Animat', component: LandingAnimatComponent},
   {path: '', redirectTo: '/landing', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent}
 ];

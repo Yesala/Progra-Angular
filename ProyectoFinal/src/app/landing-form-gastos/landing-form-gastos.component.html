@@ -1,38 +1,40 @@
 <br>
-<h6 [ngStyle]="{'color': '#e69e05', 'font-weight': 'bolder'}">Registrar gastos del mes</h6>
-<br>
-<form (ngSubmit)="onSubmit()" [formGroup]="gastosForm">
-<div class="mb-4">
-  <label for="gasto" class="form">Gasto</label>
-  <input id="gasto" class="form-control" name="gasto" placeholder="Nombre del gasto" type="text" required formControlName = "gasto"/>
-  <p *ngIf="gastosForm.get('gasto')?.touched && gastosForm.get('gasto')?.errors?.['required']" class="alert alert-warning">Este campo es obligatorio</p>
+<div class="container">
+  <h6 [ngStyle]="{'color': '#9d9e9f', 'font-weight': 'bolder'}">Registrar gastos del mes</h6>
+  <br>
+  <form (ngSubmit)="onSubmit()" [formGroup]="gastosForm">
+  <div class="mb-4">
+    <label for="gasto" class="form">Gasto</label>
+    <input id="gasto" class="form-control" name="gasto" placeholder="Nombre del gasto" type="text" required formControlName = "gasto"/>
+    <p *ngIf="gastosForm.get('gasto')?.touched && gastosForm.get('gasto')?.errors?.['required']" class="alert alert-warning">Este campo es obligatorio</p>
+  </div>
+  <div class="mb-4">
+    <label for="tipoGasto" class="form-label">Tipo de Gasto</label>
+    <select class="form-select form-select-sm"  
+            name="tipoGasto" 
+            id="tipoGasto" 
+            title="tipoGasto"
+            formControlName = "tipoGasto">
+      <option selected disabled>Seleccione el tipo de gasto</option>
+      <option value="canasta">Canasta Básica</option>
+      <option value="deporteyocio">Deporte y Ocio</option>
+      <option value="vehiculo">Vehículo</option>
+      <option value="mascota">Mascotas</option>
+      <option value="academico">Académico</option>
+      <option value="otros">Otros</option>
+    </select>
+  </div>
+  <div class="mb-4">
+    <label for="cantidadGastada" class="form">Cantidad gastada</label>
+    <input id="cantidadGastada" class="form-control" name="cantidadGastada" placeholder="Gasto en colones (sin decimales)" type="text" required formControlName = "cantidadGastada"/>
+    <p *ngIf="gastosForm.get('gasto')?.touched && gastosForm.get('gasto')?.errors?.['required']" class="alert alert-warning">Este campo es obligatorio</p>
+  </div>
+  <div class="mb-4">
+    <label for="comment" class="form-label">Comentarios adicionales</label>
+    <textarea class="form-control" id="comment" name="comment" formControlName = "comment"></textarea>
+  </div>
+  <div class="d-flex justify-content mb-4">
+    <button class="btn btn-outline-primary" type="submit" [disabled]="gastosForm.invalid">Registrar</button>
+  </div>
+  </form>
 </div>
-<div class="mb-4">
-  <label for="tipoGasto" class="form-label">Tipo de Gasto</label>
-  <select class="form-select form-select-sm"  
-          name="tipoGasto" 
-          id="tipoGasto" 
-          title="tipoGasto"
-          formControlName = "tipoGasto">
-    <option selected disabled>Seleccione el tipo de gasto</option>
-    <option value="canasta">Canasta Básica</option>
-    <option value="deporteyocio">Deporte y Ocio</option>
-    <option value="vehiculo">Vehículo</option>
-    <option value="mascota">Mascotas</option>
-    <option value="academico">Académico</option>
-    <option value="otros">Otros</option>
-  </select>
-</div>
-<div class="mb-4">
-  <label for="cantidadGastada" class="form">Cantidad gastada</label>
-  <input id="cantidadGastada" class="form-control" name="cantidadGastada" placeholder="Gasto en colones (sin decimales)" type="text" required formControlName = "cantidadGastada"/>
-  <p *ngIf="gastosForm.get('gasto')?.touched && gastosForm.get('gasto')?.errors?.['required']" class="alert alert-warning">Este campo es obligatorio</p>
-</div>
-<div class="mb-4">
-  <label for="comment" class="form-label">Comentarios adicionales</label>
-  <textarea class="form-control" id="comment" name="comment" formControlName = "comment"></textarea>
-</div>
-<div class="d-flex justify-content mb-4">
-  <button class="btn btn-outline-primary" type="submit" [disabled]="gastosForm.invalid">Registrar</button>
-</div>
-</form>
