@@ -49,5 +49,3 @@ import { LandingAnimatComponent } from './landing-animat/landing-animat.componen
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
