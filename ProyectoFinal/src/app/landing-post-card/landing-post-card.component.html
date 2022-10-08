@@ -6,8 +6,10 @@
       </div>
     </a>
     <div class="property-description">
-      <h5> {{ post.title }} </h5>
+      <h5> {{ post.title }}</h5>
+      <p>{{ post.release_date | date:'yyyy' }}</p>
       <p>{{ post.overview }}</p>
     </div>
   </div>
 </div>
+

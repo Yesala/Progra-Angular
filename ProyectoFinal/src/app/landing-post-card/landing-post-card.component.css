@@ -26,8 +26,6 @@ p {
     background-repeat: no-repeat;
 }
 
-/* Bottom Card Section */
-
 .property-description {
     background-color: #FAFAFC;
     height: 12em;
@@ -38,8 +36,6 @@ p {
     text-align: center;
 }
 
-/* Property Cards Hover States */
-
 .property-card:hover .property-description {
     height: 0em;
     padding: 0px 1em;
@@ -47,4 +43,4 @@ p {
 
 .property-card:hover .property-image {
     height: 18em;
-}
+} 
