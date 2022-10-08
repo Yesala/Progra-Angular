@@ -1,0 +1,50 @@
+p {
+    font-size: 12px;
+}
+
+.property-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    height: 18em;
+    width: 14em;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 5px 5px 25px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+.property-image {
+    height: 6em;
+    width: 14em;
+    padding: 1em 2em;
+    position: Absolute;
+    top: 0px;
+    background-color: #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description {
+    background-color: #FAFAFC;
+    height: 12em;
+    width: 14em;
+    position: absolute;
+    bottom: 0em;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description {
+    height: 0em;
+    padding: 0px 1em;
+}
+
+.property-card:hover .property-image {
+    height: 18em;
+}

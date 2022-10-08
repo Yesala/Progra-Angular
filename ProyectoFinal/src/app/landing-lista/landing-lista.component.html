@@ -1,9 +1,13 @@
 <div class="container">
     <section>
-        <ol>
-          <li *ngFor="let lista of listas" class="">
-              <a href="#">{{lista.listar}}</a>
-          </li>
-      </ol>
-</section>
+            <div class="d-inline-flex p-2">
+                    <ol>
+                        <li *ngFor="let lista of listas" class="">
+                            <a href="#">{{lista.listar}}</a> 
+                            <Button class="btn" onClick={this.deleteCustomer(this.customerPending)}>
+                            <span><i class="fa fa-trash"></i></span></Button>
+                        </li>
+                    </ol>
+            </div>
+    </section>
 </div>

@@ -1,14 +1,15 @@
+<app-landing></app-landing>
 <div>
     <hr style="border-top: dotted 3px; margin-bottom: 30px; color: orange">
     <i class="bi bi-chevron-bar-down fs-1 d-flex justify-content-center"></i>
     <div class="d-flex justify-content-center mb-4 ms-2">
-        <h4 [ngStyle]="{'color': '#2278a9'}">Resumen de gastos mensuales</h4>
+        <h4 [ngStyle]="{'color': '#2278a9'}">Historial de gastos mensuales</h4>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-6 mt-4">
-            <h5 [ngStyle]="{'color': '#9d9e9f', 'font-weight': 'bolder'}">Lista de gastos</h5>
+        <div class="col-6">
+            <h5 [ngStyle]="{'color': '#9d9e9f', 'font-weight': 'bolder'}">Lista</h5>
             <hr>
             <br>
             <ul><li *ngFor="let numero of numeros">{{ numero }}</li></ul>

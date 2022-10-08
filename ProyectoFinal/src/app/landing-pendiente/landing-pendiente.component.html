@@ -1,21 +1,18 @@
+<app-landing></app-landing>
 <div class="container">
-    <hr style="border-top: dotted 3px; margin-bottom: 30px; color: orange">
-    <i class="bi bi-chevron-bar-down fs-1 d-flex justify-content-center"></i>
-    <div class="d-flex justify-content-center mb-4 ms-2">
-        <app-landing-form-pendiente [addListar]="addListar" [ngStyle]="{'color': '#2278a9'}"></app-landing-form-pendiente>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="pendiente col-6">
-            <p>Pendientes</p>
-            <app-landing-lista [data]="landing"></app-landing-lista>
+    <div>
+        <hr style="border-top: dotted 3px; margin-bottom: 30px; color: orange">
+        <i class="bi bi-chevron-bar-down fs-1 d-flex justify-content-center"></i>
+        <div>
+            <app-landing-form-pendiente [addListar]="addListar" [ngStyle]="{'color': '#2278a9'}">
+            </app-landing-form-pendiente>
         </div>
-        <div class="canasta col-6">
-            <p [ngStyle]="{'color': 'gray'}">Lista Canasta Básica de Referencia</p>
-            <ul>
-                <li class="lh-lg" *ngFor="let canasta of canasta.canastabasica">{{ canasta }}</li>
-            </ul>
+    </div>
+    <div>
+        <div>
+            <div class="pendiente">
+                <app-landing-lista [data]="landing"></app-landing-lista>
+            </div>
         </div>
     </div>
 </div>

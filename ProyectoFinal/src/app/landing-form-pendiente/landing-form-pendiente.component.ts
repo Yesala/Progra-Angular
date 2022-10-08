@@ -16,7 +16,7 @@ export class LandingFormPendienteComponent{
   }
 
   title : string = 'Lista de Pendientes'
-  placeholder : string = 'Ingrese el pendiente'
+  placeholder : string = 'Digite aquí'
 
   addWithEvent(e : any){
     this.landing.listar = e.target[0].value

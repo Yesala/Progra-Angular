@@ -17,12 +17,12 @@ export class LandingHistorialComponent implements OnInit {
 
   numeros : string[] = []
 
-  intervalo$ = interval(1000).pipe( take(12) )
+  intervalo$ = interval(1000).pipe( take(15) )
 
   ngOnInit(): void {
     this.intervalo$.pipe(
-      map( n => `Mes: ${n+1}` ),
-      take(12)
+      map( n => `Gasto ${n+1}, día, mes, año` ),
+      take(15)
     ).subscribe({
        next: data => this.numeros.push(data),
        error: err => console.warn('Error: ', err),

@@ -2,21 +2,39 @@
     <h4 class="d-flex justify-content-center">{{ title }}</h4>
     <br>
     <form (ngSubmit)="add()" class="row g-3">
-        <div class="col-auto p-2">
+        <div class="d-flex justify-content-center">
             <label class="form-pendiente" for="pendiente">Compra/gasto</label>
         </div>
-        <div class="col-auto">
-            <input 
-            type="text" 
-            class="form-control" 
-            id="pendiente" 
-            name="pendiente" 
-            [placeholder]="placeholder"
-            [(ngModel)]="landing.listar"
-            />
+        <br>
+        <br>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-4">
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    id="pendiente" 
+                    name="pendiente" 
+                    [placeholder]="placeholder"
+                    [(ngModel)]="landing.listar"
+                    />
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-outline-warning fs-5" type="submit">+</button>
+                </div>
+            </div>
         </div>
-        <div class="col-auto">
-            <button class="btn btn-outline-primary" type="submit">Agregar</button>
-        </div>
+        
     </form>
 </section>
+
+
+<!-- 
+     <div class="row justify-content-center">
+    <div class="col-4">
+      One of two columns
+    </div>
+    <div class="col-4">
+      One of two columns
+    </div>
+ -->
