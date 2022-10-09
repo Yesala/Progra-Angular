@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/pf-my-billings'),
+      dir: require('path').join(__dirname, './coverage/reutilizable'),
       subdir: '.',
       reporters: [
         { type: 'html' },
